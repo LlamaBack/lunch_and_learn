@@ -1,11 +1,10 @@
 class TourismSight
-  attr_reader :id, :name, :street, :postcode, :city, :country
+  attr_reader :id, :name, :address, :place_id
+
   def initialize(sight_data)
     @id = nil
-    @name = sight_data[:features][0][:properties][:name]
-    @street = sight_data[:features][0][:properties][:street]
-    @postcode = sight_data[:features][0][:properties][:postcode]
-    @city = sight_data[:features][0][:properties][:city]
-    @country = sight_data[:features][0][:properties][:country]
+    @name = sight_data[:name]
+    @address = "#{@name}, #{sight_data[:street]}, #{sight_data[:postcode]} #{sight_data[:city]}, #{sight_data[:country]}"
+    @place_id = sight_data[:place_id]
   end
 end

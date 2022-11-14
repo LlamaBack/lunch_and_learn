@@ -1,5 +1,7 @@
 class Api::V1::TouristsSightsController < ApplicationController
   def index
-    response = CountryFacade.capital(params[:country]) #latlng
+    latlng = CountryFacade.capital(params[:country])
+    response = PlacesFacade.tourism_sights(latlng)
+    render json: TouristSightSerializer.new(response)
   end
 end
