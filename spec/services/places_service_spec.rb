@@ -10,6 +10,7 @@ RSpec.describe PlacesService do
         expect(sights_data[:features][0][:properties][:postcode]).to be_a String
         expect(sights_data[:features][0][:properties][:city]).to be_a String
         expect(sights_data[:features][0][:properties][:country]).to be_a String
+        expect(sights_data[:features][0][:properties][:place_id]).to be_a String
       end
     end
   end
