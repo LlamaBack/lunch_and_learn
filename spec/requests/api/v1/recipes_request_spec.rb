@@ -14,10 +14,11 @@ RSpec.describe 'Country Recipes endpoint' do
       expect(recipe1[:type]).to eq('recipe')
       expect(recipe1[:attributes]).to be_a Hash
       expect(recipe1[:attributes].length).to eq 4
-      expect(recipe1[:attributes].keys).to eq(%i[title url country image])
+      expect(recipe1[:attributes].keys).to eq(%i[title url image country])
     end
 
     it 'gets a list of recipes from a random country if a country is not given', :vcr do
+      allow(CountryFacade).to receive(:random).and_return('South Korea')
       get api_v1_recipes_path
       expect(response).to be_successful
 
@@ -29,7 +30,7 @@ RSpec.describe 'Country Recipes endpoint' do
       expect(recipe1[:type]).to eq('recipe')
       expect(recipe1[:attributes]).to be_a Hash
       expect(recipe1[:attributes].length).to eq 4
-      expect(recipe1[:attributes].keys).to eq(%i[title url country image])
+      expect(recipe1[:attributes].keys).to eq(%i[title url image country])
     end
   end
 
