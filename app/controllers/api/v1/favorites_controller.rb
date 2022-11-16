@@ -12,7 +12,7 @@ class Api::V1::FavoritesController < ApplicationController
   private
   def key_check
     # if !User.find_by(api_key: params[:api_key])
-    render json: favorite.errors, status: 400 unless User.find_by(api_key: params[:api_key])
+    render json: { error: "Invalid API Key" }, status: 400 unless User.find_by(api_key: params[:api_key])
     # end
   end
 
