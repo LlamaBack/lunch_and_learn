@@ -3,7 +3,7 @@ class Api::V1::RecipesController < ApplicationController
     if params[:country]
       response = RecipeFacade.search(params[:country])
     else
-      response = RecipeFacade.search(params[CountryFacade.random])
+      response = RecipeFacade.search(CountryFacade.random)
     end
     render json: RecipeSerializer.new(response)
   end
