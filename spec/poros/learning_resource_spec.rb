@@ -12,7 +12,6 @@ RSpec.describe LearningResource do
   it 'exists and has attributes' do
     learning_resource1 = LearningResource.new(youtube_data, image_data, 'laos')
     expect(learning_resource1).to be_a LearningResource
-    expect(learning_resource1).to be_instance_of LearningResource
     expect(learning_resource1.id).to be nil
     expect(learning_resource1.country).to eq('laos')
     expect(learning_resource1.video).to eq({ title: 'VIDEO TITLE', youtube_video_id: '123456' })
