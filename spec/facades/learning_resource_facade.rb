@@ -11,6 +11,8 @@ RSpec.describe LearningResourceFacade do
 
         image1 = laos_resource.images[0]
         expect(image1).to be_a Hash
+        # binding.pry
+        # why skipping test???
       end
     end
   end

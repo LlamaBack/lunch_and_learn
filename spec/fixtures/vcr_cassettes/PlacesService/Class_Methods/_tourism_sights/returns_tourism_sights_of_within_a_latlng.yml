@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2022 17:23:23 GMT
+      - Wed, 16 Nov 2022 10:36:41 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -49,13 +49,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Fgk6QZQ3FLdDZ%2F808N654zymjO1GipoUnSAZroYWnsnLyCIYDiePu3ldgMR894b58mRUhAB%2F1LCEPidM50qG7uX8cNKolnABCN%2F6TVa6bqO25biWnonyts%2FjE8Qq3TEUus8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FCf4gtqaXgaRB5%2FrAjz2Wy6cAxS7JP4NyXX8xWO1GQPI2z3LouTq5sx%2Bg5VsgJCbp5hFbgTN8sgg7E7MYfqO3IW43Dv3w3uuuuIoVQVGH5ap0Eg0BvKPm2w3OtgRLLjzMss%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 76a16f337b127da7-LAX
+      - 76af95e54aa59879-SJC
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -280,5 +280,5 @@ http_interactions:
         des Gobelins","wheelchair":"yes","opening_hours":"Tu-Su 11:00-18:00; Dec 25
         off; Jan 01 off; May 01 off; Dec 31 11:00-17:00","contact:street":"Avenue
         des Gobelins","contact:housenumber":42}},"place_id":"51462f41e60dd1024059c74fc9dbd56a4840f00102f901d47e9a09000000009203184d616e75666163747572652064657320476f62656c696e73"},"geometry":{"type":"Point","coordinates":[2.352077292312887,48.83465144471807]}}]}'
-  recorded_at: Mon, 14 Nov 2022 17:23:23 GMT
+  recorded_at: Wed, 16 Nov 2022 10:36:42 GMT
 recorded_with: VCR 6.1.0
