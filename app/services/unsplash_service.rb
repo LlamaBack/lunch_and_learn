@@ -1,5 +1,5 @@
 class UnsplashService
-  def self.search(country)
+  def self.photo_search(country)
     # query_params = {
     #   query: country
     # }
