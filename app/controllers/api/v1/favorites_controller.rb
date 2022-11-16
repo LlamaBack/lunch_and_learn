@@ -9,6 +9,11 @@ class Api::V1::FavoritesController < ApplicationController
     end
   end
 
+  def index
+    user = User.find_by(api_key: params[:api_key])
+    render json: FavoriteSerializer.new(user.favorites)
+  end
+
   private
   def key_check
     # if !User.find_by(api_key: params[:api_key])
