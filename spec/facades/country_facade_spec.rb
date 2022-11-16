@@ -6,5 +6,11 @@ RSpec.describe CountryFacade do
         expect(CountryFacade.capital('france')).to be_a Array
       end
     end
+
+    describe '#random' do
+      it 'returns random country', :vcr do
+        expect(CountryFacade.random).to be_a String
+      end
+    end
   end
 end
