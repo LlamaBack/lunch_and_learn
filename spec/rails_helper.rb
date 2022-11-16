@@ -77,6 +77,11 @@ VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
   config.filter_sensitive_data('9563f815466546499b59f9183a3cf65e') { ENV['PLACES_API_KEY'] } #name_api_key from config/application.yml
+  config.filter_sensitive_data('32ec3bc7ef8782994549b42da904862e') { ENV['EDAMAM_API_KEY'] }
+  config.filter_sensitive_data('82766e25') { ENV['EDAMAM_API_ID'] }
+  config.filter_sensitive_data('AIzaSyBVHyJ8h5LxotTPVdrxSyz9vrqC5-c2foM') { ENV['YOUTUBE_API_KEY'] }
+  config.filter_sensitive_data('-t02cpiVi1WskOHZCELnKcsd7WXe8BLIsTHG_LY2CI8-c2foM') { ENV['UNSPLASH_API_KEY'] }
+
   config.configure_rspec_metadata!
   # config.default_cassette_options = { re_record_interval: 30.days }
   config.allow_http_connections_when_no_cassette = true
