@@ -1,8 +1,8 @@
 class RecipeService
-  def self.search(query)
+  def self.search(country)
     query_params = {
       type: 'public',
-      q: query,
+      q: country,
       field: %w[label image url]
     }
     response = conn.get('api/recipes/v2', query_params)
