@@ -1,4 +1,4 @@
-class RecipesFacade
+class RecipeFacade
   def self.search(country)
     recipe_data = RecipeService.search(country)
     recipe_data[:hits].map do |recipe|
