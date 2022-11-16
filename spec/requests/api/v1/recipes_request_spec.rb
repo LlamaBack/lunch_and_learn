@@ -14,7 +14,7 @@ RSpec.describe 'Country Recipes endpoint' do
       expect(recipe1[:type]).to eq('recipe')
       expect(recipe1[:attributes]).to be_a Hash
       expect(recipe1[:attributes].length).to eq 4
-      expect(recipe1[:attributes].values).to all(be_a String)
+      expect(recipe1[:attributes].keys).to eq(%i[title url country image])
     end
 
     it 'gets a list of recipes from a random country if a country is not given', :vcr do
@@ -29,7 +29,7 @@ RSpec.describe 'Country Recipes endpoint' do
       expect(recipe1[:type]).to eq('recipe')
       expect(recipe1[:attributes]).to be_a Hash
       expect(recipe1[:attributes].length).to eq 4
-      expect(recipe1[:attributes].values).to all(be_a String)
+      expect(recipe1[:attributes].keys).to eq(%i[title url country image])
     end
   end
 
